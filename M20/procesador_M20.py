@@ -63,10 +63,10 @@ un_solo_fondo=1
 resto_fondo=1
 templog = 1
 N_espiras_bob_captora=1
-nombre='*M19'
+nombre='*M20'
 Analisis_de_Fourier = 1 # sobre las señales, imprime0 espectro de señal muestra
 N_armonicos_impares = 18
-concentracion =(22)*1e3 #[concentracion]= g/m^3 (1 g/l == 1e3 g/m^3) (Default = 10000 g/m^3)
+concentracion =(20)*1e3 #[concentracion]= g/m^3 (1 g/l == 1e3 g/m^3) (Default = 10000 g/m^3)
 capsula_glucosa=0   # capsula para solventes organicos
 detector_ciclos_descartables=True #en funcion a Mag max para evitar guardar/promediar con ciclos in/out
 Ciclo_promedio=1
@@ -226,7 +226,7 @@ for k in range(len(fnames_m)):
     with open(path_m[k], 'r') as f:
         fecha_in_file = f.readline()
         Fechas_from_file.append(fecha_in_file.split()[-1])
-        
+
 with open(path_m[-1], 'r') as f:
     fecha_in_file_f = f.readline().split()[-1]
     Fechas_from_file_descancelacion.append(fecha_in_file_f)
@@ -715,8 +715,8 @@ for k in range(len(fnames_m)):
 fnames_m=np.array(fnames_m)
 
 if detector_ciclos_descartables:
-    archivos_in_out=5
-    porcentaje_diferencia=40#%
+    archivos_in_out=10
+    porcentaje_diferencia=100#%
     print(f'Se identifican archivos cuya Mag maxima difieren un {porcentaje_diferencia}% de la')
     print(f'Mag max promedio = {np.mean(Mag_max[archivos_in_out:-archivos_in_out]):.0f}({np.std(Mag_max[archivos_in_out:-archivos_in_out]):.0f}) A/m de los {len(Mag_max[archivos_in_out:-archivos_in_out])} valores centrales.')
 
