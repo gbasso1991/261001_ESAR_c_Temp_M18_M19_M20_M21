@@ -328,5 +328,5 @@ plt.show()
 fig00.savefig('00_ciclos_C4.png',dpi=300)
 fig01.savefig('00_ciclos_C4_norm.png',dpi=300)
 fig02.savefig('00_templogs_C4.png',dpi=300)
-fig03.savefig('02_comparativa_C4_ESAR_Tau_Hc.png',dpi=300)
+fig03.savefig('02_comparativa_ESAR_Tau_Hc.png',dpi=300)
 #%%
